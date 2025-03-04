@@ -1,0 +1,38 @@
+<div class="circle">
+  <div class="small-square"></div>
+  <div class="big-square"></div>
+</div>
+<style>
+  body{
+    display: grid;
+    place-items: center;
+    background: #293462;
+  }
+  .circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #FFF1C1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .small-square{
+    position: absolute;
+    background: #FE5F55;
+    height: 50px;
+    width: 50px;
+    top: 140px;
+    left: 5px;
+    transform: rotate(45deg);
+  }
+    .big-square{
+    position: absolute;
+    background: #FE5F55;
+    height: 250px;
+    width: 250px;
+    top: 109px;
+    left: 17px;
+    transform: rotate(45deg);
+  }
+</style>

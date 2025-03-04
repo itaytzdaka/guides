@@ -1,0 +1,55 @@
+<div class="one">
+  <div class="red"></div>
+  <div class="back"></div>
+  <div class="white"></div>
+</div>
+<div class="block"></div>
+<div class="two"></div>
+
+<style>
+  body {
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: #6CB3A9;
+  }
+  
+  .red{
+    height: 45%;
+    background-color: #D25B70;
+  }
+  .back{
+    height: 10%;
+    background-color: #6CB3A9;
+  }
+  .white{
+    height: 45%;
+    background-color: #FFFFFF;
+  }
+
+  .block{
+    position: absolute;
+    background-color: #781728;
+    height: 20px;
+    width: 180px;
+  }
+
+  .one {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .two{
+    position: absolute;
+    background-color: #F6DF96;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 0 10px #781728;
+  }
+</style>

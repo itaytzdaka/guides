@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="line" id="d1"></div>
+  <div class="line" id="d2"></div>
+  <div class="line" id="d3"></div>
+  <div class="line" id="d4"></div>
+  <div class="line" id="d5"></div>
+  <div class="line" id="d6"></div>
+  <div class="line" id="d7"></div>
+</div>
+<style>
+  body{
+    display: grid;
+    place-items: center;
+    background: #D25B70;
+  }
+  .container{
+    position: relative;
+    top: 45px;
+    height: 0;
+    width: 0;
+    background: black;
+  }
+  .line{
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background: #F2E09F;
+    border-radius: 10px;
+  }
+  #d1{
+    left: 20px;
+  }
+  #d2{
+    left: 10px;
+    top: -35px;
+    transform: rotate(-30deg);
+  }
+  #d3{
+    left: -15px;
+    top: -60px;
+    transform: rotate(-60deg);
+  }
+  #d4{
+    left: -50px;
+    top: -70px;
+    transform: rotate(-90deg);
+  }
+  #d5{
+    left: -85px;
+    top: -60px;
+    transform: rotate(-120deg);
+  }
+  #d6{
+    left: -110px;
+    top: -35px;
+    transform: rotate(-150deg);
+  }
+  #d7{
+    left: -120px;
+  }
+</style>

@@ -1,0 +1,88 @@
+<div class="band">
+  <div class="shield">
+    <div class="left">
+        <div class="dot"></div>
+    	<div class="dot"></div>
+    	<div class="dot"></div>
+    </div>
+    <div class="center">
+      	<div class="reflection"></div>
+    	<div class="line"></div>
+    	<div class="line"></div>
+    	<div class="line"></div>
+    	<div class="line"></div>
+    </div>
+    <div class="right">
+        <div class="dot"></div>
+    	<div class="dot"></div>
+    	<div class="dot"></div>  
+    </div>
+  </div>
+</div>
+
+
+<style>
+  body{
+    display: grid;
+    place-items: center;
+    background: #000000;
+  }
+  
+  .band{
+    display: grid;
+    place-items: center;
+    background-color: #37385A;
+    width: 240px;
+    height: 120px;
+    border-radius: 20px;
+  }
+  
+  .shield{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    padding: 15px;
+    background-color: #9897AE;
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .center{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .reflection{
+    background-color: #C0C3DB;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 52px;
+    transform: skewX(-15deg);
+  }
+  
+  .line{
+    background-color: #000000;
+    width: 10px;
+    margin: 0 5px;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  
+  .dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 25px;
+    background-color: #000000;
+  }
+  
+  .left , .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+</style>

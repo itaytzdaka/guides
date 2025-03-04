@@ -1,0 +1,42 @@
+<div class="a"></div>
+<div class="b"></div>
+<style>
+  body{
+    background: #191919;
+    display: grid;
+    place-items: center;
+  }
+  .a {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background: #F2AD43;
+    border-radius: 100px 100px 27px 27px;
+    overflow: hidden;
+  }
+  .b{
+    position: absolute;
+    top: 140px;
+    width: 60px;
+    height: 60px;
+    background: #FFF58F;
+    border-radius: 50%;
+  }
+  .a::before , .a::after{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    border-radius: 50%;
+    bottom: -100px;
+  }
+  .a::before{
+    left: -100px;
+    background: #E08027;
+  }
+  .a::after{
+    right: -100px;
+    background: #824B20;
+  }
+</style>

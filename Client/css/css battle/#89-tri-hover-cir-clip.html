@@ -1,0 +1,32 @@
+<div class="circle"></div>
+<div class="triangle">
+  <div class="clip"></div>
+</div>
+<style>
+  body{
+    background: #191919;
+  }
+  div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  .circle{
+    left: 50%;
+    top: 50%;
+    background: #F9E492;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+  }
+  .triangle {
+    left: 50%;
+    top: 53%;
+    background: #4F77FF;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+  }
+  .clip{
+    background: #191919;
+    clip-path: ellipse(100px 100px at -3% -3%);
+  }
+</style>

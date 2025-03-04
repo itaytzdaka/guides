@@ -1,0 +1,32 @@
+<div class="square" style="transform: rotate(45deg)">
+    <div class="green"></div>
+    <div class="orange"></div>
+    <div class="square"></div>
+  <style>
+    body{
+      display: grid;
+      place-items: center;
+    }
+    .square {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background: #FBE18C;
+    }
+    .orange{
+      position: absolute;
+      width: 200px;
+      height: 50px;
+      background: #F3AC3C;
+      left: -75px;
+      z-index: -1;
+    }
+    .green{
+      position: absolute;
+      width: 50px;
+      height: 200px;
+      background: #A3A368;
+      top: -75px;
+      z-index: -1;
+    }
+  </style>
