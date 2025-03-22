@@ -133,6 +133,9 @@ git branch --list
 # list branches from all remotes.
 git branch -r
 
+# show which remote branch local branch is tracking
+git branch -vv
+
 # creates a new branch 
 git branch [new-branch-name]
 
@@ -155,6 +158,11 @@ git merge [branch-name]
 
 # give a name to commit
 git tag "[tag_name]"
+
+# delete branch
+git branch -d [branch-name]
+
+
 
 
 //////////////////////////////////////////////////////////////     merge     ////////////////////////////////////////////////////////////
