@@ -2,6 +2,7 @@
 # run a docker file
 docker build -t [image-name-to-create] . 
 docker build -t [image-name-to-create]:[tag-name] . 
+docker build -f [custom-dockerfile-name] -t [image-name] .  
 
 docker build -t mydemo:alpha . 
 docker build -t fdemo . 
@@ -56,7 +57,6 @@ docker start [container-id]
 
 # delete a container
 docker rm [container-id]
-docker rm -f (docker ps -aq)
 
 docker OBJECT prune
 
