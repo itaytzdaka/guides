@@ -110,7 +110,6 @@ git reset HEAD [fileName]
 
 
 
-
 //////////////////////////////////////////////////////////////     restore files     ////////////////////////////////////////////////////////////
 
 # revert changes in your working directory by restoring the file to the state of HEAD.
@@ -122,17 +121,14 @@ git restore .
 
 //////////////////////////////////////////////////////////////     restore commit     ////////////////////////////////////////////////////////////
 
-# unCommit. 
-# move the current branch pointer to a another commit.
+
 
 # keeping the working directory and the staging area.
-git reset --soft [commit-id]
+git reset --soft [commit-id] / [HEAD~1]
 
-# move back one commit while keeping the working directory and the staging area.
-git reset --soft HEAD~1
 
 # keeping the working directory but not the staging area.
-git reset [commit-id]
+git reset [commit-id] / [HEAD~1]
 
 
 # discards all changes in both the staging area and working directory.
@@ -170,9 +166,6 @@ git checkout [branch-name]
 # checkout one commit before HEAD
 git checkout HEAD~1
 
-# הפעיל branch-לתוך branch ממזג
-git merge [branch-name]
-
 # give a name to commit
 git tag "[tag_name]"
 
@@ -194,6 +187,10 @@ git merge --no-commit [branch-name]
 # Merge only if it's a fast-forward, no merged commit created.
 git merge --ff-only [branch-name]
 
+# Forces a merge commit, even if Git could do a fast-forward merge.
+git merge --no-ff branch-name
+
+# cancel a merge process
 git merge --abort
 
 
