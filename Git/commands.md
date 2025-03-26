@@ -1,4 +1,5 @@
 //////////////////////////////////////////////////////////////     global     ////////////////////////////////////////////////////////////
+
 # יש להזין פרטי משתמש בתור התחלה
 git config --global user.name "itaytzdaka"
 git config --global user.email itaytzdaka1@gmail.com
@@ -12,20 +13,8 @@ git config --global –e
 # יוצר תיקית גיט בפרויקט
 git init
 
-# בודק אלו קבצים נערכו ולא נשמרו
-git status
-
 # commit-מכין את כל הקבצים להעלאה ל
 git add .
-
-# commit-מכין קובץ ספציפי להעלאה ל
-git add [fileName]
-
-# staging area בודק אלו קבצים נוספו ל
-git ls-files
-
-# בודק סטטוס של שינויים בקבצים
-git status -s
 
 # main -ל master -מ branch -משנה את הדיפולט
 git branch -M [main]
@@ -46,6 +35,19 @@ git pull origin main
 git clone https://github.com/itaytzdaka/kitten.git
 
 
+//////////////////////////////////////////////////////////////     status     ////////////////////////////////////////////////////////////
+
+
+# בודק אלו קבצים נערכו ולא נשמרו
+git status
+
+# staging area בודק אלו קבצים נוספו ל
+git ls-files
+
+# מציג סטטוס של שינויים בקבצים
+git status -s
+
+
 //////////////////////////////////////////////////////////////     logs     ////////////////////////////////////////////////////////////
 
 # Show old Branch History and commits, author and date
@@ -55,8 +57,17 @@ git log
 git log --graph --oneline --all
 
 
+//////////////////////////////////////////////////////////////     add     ////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////     compare changes     ////////////////////////////////////////////////////////////
+
+# commit-מכין את כל הקבצים להעלאה ל
+git add .
+
+# commit-מכין קובץ ספציפי להעלאה ל
+git add [fileName]
+
+
+//////////////////////////////////////////////////////////     compare changes     ////////////////////////////////////////////////////////////
 
 # visualize the differences between the working directory and the previous version of the repository
 git diff
@@ -71,37 +82,43 @@ git add [directory]
 git add . 
 
 
-//////////////////////////////////////////////////////////////     un-staging     ////////////////////////////////////////////////////////////
-
-
-# unstage a file, keeps changes in the working directory but removes the file from the staging
-git restore --staged [fileName]
-
-
-# unstage a file. keeps changes in the working directory but removes the file from the staging
-git reset HEAD [fileName]
-
-
-# unstage all files added to the staging area
-git reset
-
-
-//////////////////////////////////////////////////////////////     restore files     ////////////////////////////////////////////////////////////
-
-
-# revert all tracked files in the current directory (and its subdirectories) back to the state they were in at HEAD (the latest commit by default). 
-git restore .
-
-# revert changes in your working directory by restoring the file to the state of HEAD.
-git restore [fileName]
-
-
-
 
 //////////////////////////////////////////////////////////////     commit     ////////////////////////////////////////////////////////////
 
 # commit the changes
 git commit -m "first commit"
+
+# add all to staging area + commit
+git commit -am "first commit"
+
+
+//////////////////////////////////////////////////////////////     un-staging     ////////////////////////////////////////////////////////////
+
+
+# unstage a file from staging area
+git restore --staged [fileName]
+
+# unstage all files added to the staging area
+git reset
+
+# unstage a file from the staging area
+git reset [fileName]
+
+# unstage a file from the staging area
+git reset HEAD [fileName]
+
+
+
+
+
+//////////////////////////////////////////////////////////////     restore files     ////////////////////////////////////////////////////////////
+
+# revert changes in your working directory by restoring the file to the state of HEAD.
+git restore [fileName]
+
+# revert all tracked files in the current directory (and its subdirectories) back to the state they were in at HEAD (the latest commit by default). 
+git restore .
+
 
 //////////////////////////////////////////////////////////////     restore commit     ////////////////////////////////////////////////////////////
 
@@ -182,7 +199,7 @@ git merge --abort
 
 
 
-//////////////////////////////////////////////////////////////     rebase     ////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////     merge - rebase     ////////////////////////////////////////////////////////////
 
 git rebase [branch-name]
 
@@ -202,6 +219,7 @@ git branch -u [remote_repository]/[remote_branch] [local_branch]
 
 # lists all local branches along with information on their upstream (tracking) branches. 
 git branch -vv
+
 
 //////////////////////////////////////////////////////////////     remote     ////////////////////////////////////////////////////////////
 
